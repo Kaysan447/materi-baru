@@ -1,63 +1,26 @@
-#pertemuan 2, list
-
 import sys
-colors: list[str] = ["red"]
-print(colors)
-print(sys.getsizeof(colors))
+#membuat tuple
+logsapps = ("user1 login", "user2 login")
+print(logsapps)
+print("memiliki ukuran tuple", sys.getsizeof(logsapps))
 
-#menambahkan elemen ke dalam list
-colors.append("blue")
-print(colors)
-print(sys.getsizeof(colors))
+logsapps_list = ["user1 login", "user2 login"]
+print(logsapps_list)
+print("memiliki ukuran list", sys.getsizeof(logsapps_list))
 
-colors.insert(0, "White")
-print(colors)
-print(sys.getsizeof(colors))
+#logsapps.append("user3 login") #error karena tuple tidak bisa diubah
+#logsapps [0] = "user1 logout" #error karena tuple tidak bisa diubah
+#logsapps.remove("user1 login") #error karena tuple tidak bisa diubah
 
-colors.append("green")
-print(colors)
-print(sys.getsizeof(colors))
+#pembuktian bahwa tuple bisa di akses dengan index
+print(logsapps[0])
+print(logsapps[-1])
 
-colors.append("yellow")
-print(colors)
-print(sys.getsizeof(colors))
+#slice dan copy
+print(logsapps[0:1])
+backup_logsapps = logsapps[:]
+print(backup_logsapps)
 
-colors.append("purple")
-print(colors)
-print(sys.getsizeof(colors))
-
-colors.append("pink")
-print(colors)
-print(sys.getsizeof(colors))
-
-colors.append("black")
-print(colors)
-print(sys.getsizeof(colors))
-
-colors.append("brown")
-print(colors)
-print(sys.getsizeof(colors))
-
-
-#menghapus elemen dari list
-colors.pop()
-print(colors)
-print(sys.getsizeof(colors))
-
-colors.remove("red")
-print(colors)
-print(sys.getsizeof(colors))
-
-colors.reverse
-print(colors)
-print(sys.getsizeof(colors))
-
-numbers: list[int] = [3.60, 3.80, 3.60, 3.80, 3.60, 3.80, 3.60, 3.80]
-print(sum(numbers)/len(numbers))
-print(len(numbers))
-print(sys.getsizeof(numbers))
-print(numbers)
-
-backup_numbers: list[float] = numbers.copy()
-print(backup_numbers)
-print(sys.getsizeof(backup_numbers))
+usr1, usr2 = logsapps
+print(usr1)
+print(usr2)
